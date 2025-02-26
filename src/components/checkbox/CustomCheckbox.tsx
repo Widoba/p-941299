@@ -30,7 +30,7 @@ export const CustomCheckbox: React.FC<CheckboxProps> = ({
       return "bg-[rgba(189,230,232,1)]";
     }
     if (disabled && !checked) {
-      return "bg-white shadow-[0px_1px_2px_0px_rgba(0,0,0,0.20)_inset] border-[0.5px] border-solid border-[#DADCE0] opacity-50";
+      return "box-border w-3.5 h-3.5 bg-white border-[0.5px] border-solid border-[#DADCE0] shadow-[inset_0px_1px_2px_rgba(0,0,0,0.2)] rounded-sm opacity-50";
     }
     if (checked || indeterminate) {
       return "bg-[rgba(37,201,208,1)]";
