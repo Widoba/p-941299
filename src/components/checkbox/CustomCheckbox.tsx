@@ -1,3 +1,4 @@
+
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { CheckboxProps } from "./types";
@@ -25,8 +26,11 @@ export const CustomCheckbox: React.FC<CheckboxProps> = ({
   };
 
   const getCheckboxStyle = () => {
-    if (disabled) {
+    if (disabled && checked) {
       return "bg-[rgba(189,230,232,1)]";
+    }
+    if (disabled && !checked) {
+      return "bg-white shadow-[0px_1px_2px_0px_rgba(0,0,0,0.20)_inset] border-[0.5px] border-solid border-[#DADCE0] opacity-50";
     }
     if (checked || indeterminate) {
       return "bg-[rgba(37,201,208,1)]";
